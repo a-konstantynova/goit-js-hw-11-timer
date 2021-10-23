@@ -5,12 +5,13 @@ refs = {
   seconds: document.querySelector('[data-value="secs"]'),
 };
 
-
 class countdownTimer {
   constructor({ selector, targetDate, onTick }) {
     this.selector = selector;
     this.targetDate = targetDate;
     this.onTick = onTick;
+
+    this.intervalId = null;
   }
 
   intervalId = setInterval(() => {
